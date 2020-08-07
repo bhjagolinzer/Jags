@@ -1,0 +1,21 @@
+---
+title: "package_details"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{package_details}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+#Package for analyzing crash data
+
+##Description
+Collection of functions to help analyze crash data
+
