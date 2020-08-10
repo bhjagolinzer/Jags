@@ -19,5 +19,5 @@ Read in files and create tibble of counts of year/month combinations in all impo
 This function will not work as intended if an \code{years} is not an integer or a vector of integers
 }
 \examples{
-fars_summarize_years(c(2013,2014))
+\dontrun{fars_summarize_years(c(2013,2014))}
 }

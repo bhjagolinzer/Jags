@@ -20,6 +20,3 @@ Read in files and create visual of all accidents in state for a given year
 \note{
 This function will not work as intended if an \code{year} is not an integer or \code{state.num} is not an integer from 1-56
 }
-\examples{
-fars_map_state(1,2013)
-}

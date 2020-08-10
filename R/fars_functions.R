@@ -6,10 +6,9 @@
 #' @importFrom dplyr tbl_df
 #' @note
 #' This function will error out if the \code{filename} does not exist
-#' @examples
-#' fars_read("accident_2013.csv.bz2")
 #' @export
 fars_read <- function(filename) {
+  filename <- NULL
   if(!file.exists(filename))
     stop("file '", filename, "' does not exist")
   data <- suppressMessages({
@@ -28,6 +27,7 @@ fars_read <- function(filename) {
 #' make_filename(2013)
 #' @export
 make_filename <- function(year) {
+  year <- NULL
   year <- as.integer(year)
   sprintf("accident_%d.csv.bz2", year)
 }
@@ -37,12 +37,14 @@ make_filename <- function(year) {
 #'@param years a vector of four digit integers - all the years of files you are interested in
 #'@return a list of tibbles containing month/year combinations in the files specified by the \code{years} argument
 #'@importFrom dplyr mutate select
+#'@importFrom magrittr `%>%`
 #'@note
 #' This function will not work as intended if an \code{years} is not an integer or a vector of integers
 #' @examples
-#' fars_read_years(c(2013,2014))
+#' \dontrun{fars_read_years(c(2013,2014))}
 #' @export
 fars_read_years <- function(years) {
+   MONTH <- years <- NULL
   lapply(years, function(year) {
     file <- make_filename(year)
     tryCatch({
@@ -62,12 +64,14 @@ fars_read_years <- function(years) {
 #'@return a tibble containing counts of month/year combinations in the files specified by the \code{years} argument
 #'@importFrom dplyr bind_rows group_by summarize
 #'@importFrom tidyr spread
+#'@importFrom magrittr `%>%`
 #'@note
 #' This function will not work as intended if an \code{years} is not an integer or a vector of integers
 #' @examples
-#' fars_summarize_years(c(2013,2014))
+#' \dontrun{fars_summarize_years(c(2013,2014))}
 #' @export
 fars_summarize_years <- function(years) {
+  MONTH <- n <- year <- NULL
   dat_list <- fars_read_years(years)
   dplyr::bind_rows(dat_list) %>%
     dplyr::group_by(year, MONTH) %>%
@@ -85,10 +89,9 @@ fars_summarize_years <- function(years) {
 #'@importFrom graphics points
 #'@note
 #' This function will not work as intended if an \code{year} is not an integer or \code{state.num} is not an integer from 1-56
-#' @examples
-#' fars_map_state(1,2013)
 #' @export
 fars_map_state <- function(state.num, year) {
+  MONTH <- STATE <- n <- year <- NULL
   filename <- make_filename(year)
   data <- fars_read(filename)
   state.num <- as.integer(state.num)

@@ -4,7 +4,7 @@ Title: USNHTSA Fatality Analysis Reporting
 Version: 0.1.0
 Author: Ben Jagolinzer <bhjagolinzer@gmail.com>
 Maintainer: TBen Jagolinzer <bhjagolinzer@gmail.com>
-Description: A function for organizing and plotting Traffic Fatality Data
+Description: A function for organizing and plotting Traffic Fatality Data. Function provides functionality at the state and year levels. 
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
@@ -14,3 +14,4 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+Imports: readr, tidyr, dplyr, graphics,maps,testthat,magrittr

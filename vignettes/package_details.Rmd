@@ -1,5 +1,7 @@
 ---
 title: "package_details"
+author: "Ben Jagolinzer"
+date: "2020-08-10"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{package_details}
@@ -14,8 +16,17 @@ knitr::opts_chunk$set(
 )
 ```
 
-#Package for analyzing crash data
 
-##Description
-Collection of functions to help analyze crash data
+# Package for analyzing crash data
+
+## Description
+Collection of functions to help analyze crash data. 
+
+## Examples
+```{r example}
+#load package
+library(Jags)
+#read in accident data from 2020
+fars_read_years(2020)
+```
 

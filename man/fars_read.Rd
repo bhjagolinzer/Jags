@@ -18,6 +18,3 @@ Read in a CSV file and convert it into a data frame
 \note{
 This function will error out if the \code{filename} does not exist
 }
-\examples{
-fars_read("accident_2013.csv.bz2")
-}

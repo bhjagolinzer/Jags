@@ -19,5 +19,5 @@ Read in files and create tibble of month and year combinations in each file
 This function will not work as intended if an \code{years} is not an integer or a vector of integers
 }
 \examples{
-fars_read_years(c(2013,2014))
+\dontrun{fars_read_years(c(2013,2014))}
 }
