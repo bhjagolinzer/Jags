@@ -14,4 +14,4 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
-Imports: readr, tidyr, dplyr, graphics,maps,testthat,magrittr
+Imports: readr, tidyverse, dplyr, graphics,maps,testthat,magrittr
